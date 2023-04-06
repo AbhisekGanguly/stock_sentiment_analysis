@@ -13,9 +13,9 @@ class GUI:
         master.geometry("800x600")
 
         self.master = master
-        master.title("Sentiment Analysis GUI")
+        master.title("Sentiment Analysis on Keyword")
 
-        self.label = ttk.Label(master, text="Enter a stock symbol (e.g., AAPL)")
+        self.label = ttk.Label(master, text="Enter a Keyword you want to search for:")
         self.label.pack()
 
         self.entry = ttk.Entry(master)
@@ -40,12 +40,12 @@ class GUI:
 
     # Function to analyze the sentiment of tweets containing a specific stock symbol
     def analyze(self):
-        stock_symbol = self.entry.get().upper()
-        if not stock_symbol:
+        word_search = self.entry.get().upper()
+        if not word_search:
             messagebox.showerror("Error", "Please enter a stock symbol")
             return
         try:
-            tweets_with_sentiment_df = sa.get_tweets_with_sentiment(stock_symbol)
+            tweets_with_sentiment_df = sa.get_tweets_with_sentiment(word_search)
         except ValueError as e:
             messagebox.showerror("Error", str(e))
             return

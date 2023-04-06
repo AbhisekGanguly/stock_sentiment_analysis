@@ -17,7 +17,7 @@ def analyze_sentiment(text_analytics_client, df, batch_size=10):
 # Integrating the sentiment_analysis with gui.py to get input from analyze() function and returning the 
 # results as a dataframe to the GUI
 
-def get_tweets_with_sentiment(stock_symbol):
+def get_tweets_with_sentiment(word_search):
     # Authenticate with the Text Analytics service
     print("Authenticating with the Text Analytics service...")
     text_analytics_client = TextAnalyticsClient(endpoint=TEXT_ANALYTICS_ENDPOINT, credential=AzureKeyCredential(TEXT_ANALYTICS_SUBSCRIPTION_KEY))
@@ -28,7 +28,7 @@ def get_tweets_with_sentiment(stock_symbol):
 
     # Get tweets containing a specific stock symbol
     num_tweets = 100
-    tweets_df = get_stock_tweets(api, stock_symbol, num_tweets)
+    tweets_df = get_stock_tweets(api, word_search, num_tweets)
 
     # Analyze the sentiment of the tweets
     print("Analyzing sentiment of tweets...")
@@ -57,9 +57,9 @@ def get_tweets_with_sentiment(stock_symbol):
 #     api = get_twitter_api()
 
 #     # Get tweets containing a specific stock symbol
-#     stock_symbol = "$TSLA"
+#     word_search = "$TSLA"
 #     num_tweets = 100
-#     tweets_df = get_stock_tweets(api, stock_symbol, num_tweets)
+#     tweets_df = get_stock_tweets(api, word_search, num_tweets)
 
 #     # Analyze the sentiment of the tweets
 #     print("Analyzing sentiment of tweets...")

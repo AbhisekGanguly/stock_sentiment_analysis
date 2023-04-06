@@ -1,6 +1,6 @@
-# Sentiment Analysis of Stocks
+# Sentiment Analysis of Keywords
 
-This project is a Python application that performs sentiment analysis on Twitter data related to a specific stock. The application uses the Twitter API to gather tweets containing the stock symbol, and then uses Azure Cognitive Services for Language to perform sentiment analysis on the tweet data. The sentiment analysis results are then displayed in a graphical user interface.
+This project is a Python application that performs sentiment analysis on Twitter data related to a specific keyword. The application uses the Twitter API to gather tweets containing the specific word, and then uses Azure Cognitive Services for Language to perform sentiment analysis on the tweet data. The sentiment analysis results are then displayed in a graphical user interface.
 
 ## Getting Started
 
@@ -40,9 +40,9 @@ To use the application, follow these steps:
 3. Edit the `config.py.sample` file and rename it to `config.py`. 
 4. Add your Azure Cognitive Services for Language API key and endpoint, as well as your Twitter API credentials.
 5. Run the application by executing the run.py file.
-6. Enter a stock symbol in the text box and click the "Analyze" button.
+6. Enter a  keyword in the text box and click the "Analyze" button.
 
-The application will display a graphical user interface with a sentiment analysis table of the most positive and negative tweets related to the stock symbol.
+The application will display a graphical user interface with a sentiment analysis table of the most positive and negative tweets related to the keyword.
 
 ## Project Structure
 * `config.py`: Configuration file for API keys and endpoints.

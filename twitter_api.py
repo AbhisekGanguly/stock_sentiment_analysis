@@ -10,9 +10,9 @@ def get_twitter_api():
     return tweepy.API(auth)
 
 # Function to get tweets containing a specific stock symbol
-def get_stock_tweets(api, stock_symbol, num_tweets=100):
-    print("Getting tweets containing the stock symbol: " + stock_symbol)
-    tweets = tweepy.Cursor(api.search_tweets, q=stock_symbol, lang="en").items(num_tweets)
+def get_stock_tweets(api, word_search, num_tweets=100):
+    print("Getting tweets containing the stock symbol: " + word_search)
+    tweets = tweepy.Cursor(api.search_tweets, q=word_search, lang="en").items(num_tweets)
     tweet_data = [[tweet.id, tweet.text, tweet.created_at] for tweet in tweets]
     df = pd.DataFrame(data=tweet_data, columns=["id", "text", "created_at"])
     return df
