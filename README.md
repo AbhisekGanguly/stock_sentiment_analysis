@@ -10,8 +10,26 @@ To use this application, you will need to have the following:
 * An Azure Cognitive Services for Language account and API key
 * A Twitter Developer account and API credentials
 
-You will also need to install the following Python packages:
-`pip install tweepy pandas matplotlib textblob azure-cognitiveservices-language-textanalytics`
+You will also need to install the python libraries listed in the requirements.txt file.
+To install them you can run the following command in your terminal:
+
+`pip install -r requirements.txt`
+
+I would suggest making a seperate environment to do so. It can be done by running the following command in your terminal:
+
+`python -m venv env`
+
+Then, activate the environment by running the following command:
+
+`env\Scripts\activate`
+
+Alternatively, you can use the Anaconda distribution to create a virtual environment.
+
+`conda create -n env python=3.10`
+
+Then, activate the environment by running the following command:
+
+`conda activate env`
 
 ## Usage
 
@@ -40,5 +58,5 @@ This project is licensed under the MIT License. See the LICENSE file for details
 
 Acknowledgements
 * Tweepy library
-* TextBlob library
+* TKinter library
 * Azure Cognitive Services for Language
