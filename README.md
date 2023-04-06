@@ -37,10 +37,12 @@ To use the application, follow these steps:
 
 1. Clone the repository to your local machine.
 2. Open the config.py file and enter your Azure Cognitive Services for Language API key and endpoint, as well as your Twitter API credentials.
-3. Open the sentiment_analysis.py file and modify the STOCK_SYMBOL variable to the stock symbol you want to analyze.
-4. Run the application by executing the run.py file.
+3. Edit the `config.py.sample` file and rename it to `config.py`. 
+4. Add your Azure Cognitive Services for Language API key and endpoint, as well as your Twitter API credentials.
+5. Run the application by executing the run.py file.
+6. Enter a stock symbol in the text box and click the "Analyze" button.
 
-The application will display a graphical user interface with a sentiment analysis chart and a table of the most positive and negative tweets related to the stock symbol.
+The application will display a graphical user interface with a sentiment analysis table of the most positive and negative tweets related to the stock symbol.
 
 ## Project Structure
 * `config.py`: Configuration file for API keys and endpoints.

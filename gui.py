@@ -3,6 +3,7 @@ from tkinter import ttk
 from tkinter import messagebox
 import pandas as pd
 import sentiment_analysis as sa
+import matplotlib.pyplot as plt
 
 class GUI:
 
@@ -30,6 +31,12 @@ class GUI:
         self.table.heading("text", text="Tweet")
         self.table.heading("sentiment", text="Sentiment")
         self.table.pack()
+
+        # Adding a pie chart of the sentiment analysis of neutral, positive, mixed and negative tweets
+        self.pie_chart = ttk.Label(master, text="Pie Chart")
+        self.pie_chart.pack()
+
+    global tweets_with_sentiment_df
 
     # Function to analyze the sentiment of tweets containing a specific stock symbol
     def analyze(self):
